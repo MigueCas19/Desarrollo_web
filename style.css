@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo&display=swap');
+h1,h2,h3{
+    color: mediumblue;
+    
+}
+p{
+    color: azure;
+    
+}
+
+/*a{
+    color: black;
+}
+*/
+body{
+    margin: 0;
+}
+
+nav li{
+    display: inline-block;
+    font-size: 20px;
+    padding: 0px 40px 0px 40px;
+    margin: 0px 0px 0px 0px;
+    
+}
+
+nav{
+    position: fixed; /*para dejar el texto quieto mientras muevo el scroll*/
+    text-align: center;
+    padding: 0;
+    margin: 0px 0px 0px 0px;
+    overflow: hidden;
+    background-color: rgb(255,255,255,0.8);
+    top: 0;
+    width: 100%;
+    color: rgb(red, green, blue)
+    
+}
+
+html{
+    background-image: url(www/images/textu2.jpg);
+    background-attachment: fixed;
+    background-size: 170%;
+}
+
+/*el numeral está asociado a los ids*/
+#navbar a{
+    color: rgb(0, 0, 0);
+    list-style-type: none;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    color: gray;
+}
+
+header{
+    margin-top: 100px; 
+}
+
+/*el punto es a las clases*/
+.intro{
+    height: 600px;
+    text-align: center;
+}
+
+.foto{
+    align-self: center;
+    border-radius: 50%;
+    background-image: url(www/images/foto2.jpg);
+    background-size: cover;
+    box-shadow: 0px 0px 10px 0px black;
+    height: 350px;
+    width: 350px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 120px 30px 0px 30px;
+}
+.foto:hover{
+    background-image: url(www/images/foto3.jpg);
+    background-size: cover;
+}
+
+.nombre{
+    margin: 120px 30px 0px 30px;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Arvo', serif;
+
+}
+
+.nombre > h1{
+    border-right: 4px solid rgb(0, 44, 95);
+    border-left: 4px solid rgb(0, 44, 95);
+    color: #00374f;
+    display:inline-block;
+    min-height: 70px;
+    margin: 55px auto 0;
+    padding: 0px 10px;
+    z-index:2;
+    font-size: 3em;
+    margin: 0.67em 0;
+
+}
