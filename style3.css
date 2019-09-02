@@ -1,0 +1,53 @@
+.cuadro{
+    /* animation-duration: 16s;
+    animation-name: mover;
+    animation-iteration-count: infinite;*/
+    position:relative; 
+    animation: mover 4s steps(1) infinite;
+    height: 100px;
+    width: 200px;
+    background-color: aqua;
+    text-align: center
+    
+    
+    /* animation: desplazamiento 16s steps(3) infinite; */
+}
+
+@keyframes mover{
+    from{
+        top: 0px;
+        left:0px;
+
+    }
+    25%{
+        background-color: blue;
+
+    }50%{
+        background-color: white;
+
+    }75%{
+        background-color: yellow;
+
+    }to{
+        background-color: aqua;
+        /* margin-left: 0%;
+        width:300%; */
+        top:600px;
+        left: 600px; 
+    }
+    
+}
+
+/* @keyframes desplazamiento{
+    from{
+        top: 0px;
+        left:0px;
+
+    }
+    to{
+        top:600px;
+        left: 600px; 
+    }
+} */
+
+
