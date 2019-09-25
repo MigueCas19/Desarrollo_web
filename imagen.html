@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id="grafico">  </div>
+    <button onclick="aleatorizar()">Aleatorizar  </button>
+
+     <script>
+
+        //puntos
+        scater1={
+             x: [1,2,3],
+             y: [6,7,8],
+             mode: 'line'
+         };
+        //  scater2={
+        //      x: [1,2,3,4,5],
+        //      y: [8,45,10,11,12],
+        //      mode: 'lines'
+        //  };
+        //  scater3={
+        //      x: [1,2,3,4,5],
+        //      y: [12,32,1,17,15],
+        //      mode: 'lines+markers'
+        //  };
+
+         data=[scater1];
+         Plotly.newPlot("grafico", data);
+        
+         function aleatorizar(){
+
+         Plotly.animate("grafico", {
+             data: [{y:[Math.random()*100,Math.random()*100,Math.random()*100]}]
+         })}
+
+
+        //DIBUJO ANIMADO
+        // var n = 100;
+        // var x = [], y = [], z = [];
+        // var dt = 0.015;
+
+        // for (i = 0; i < n; i++) {
+        // x[i] = Math.random() * 2 - 1;
+        // y[i] = Math.random() * 2 - 1;
+        // z[i] = 30 + Math.random() * 10;
+        // }
+
+        // Plotly.plot('grafico', [{
+        // x: x,
+        // y: z,
+        // mode: 'markers'
+        // }], {
+        // xaxis: {range: [-40, 40]},
+        // yaxis: {range: [0, 60]}
+        // })
+
+        // function compute () {
+        // var s = 10, b = 8/3, r = 28;
+        // var dx, dy, dz;
+        // var xh, yh, zh;
+        // for (var i = 0; i < n; i++) {
+        //     dx = s * (y[i] - x[i]);
+        //     dy = x[i] * (r - z[i]) - y[i];
+        //     dz = x[i] * y[i] - b * z[i];
+
+        //     xh = x[i] + dx * dt * 0.5;
+        //     yh = y[i] + dy * dt * 0.5;
+        //     zh = z[i] + dz * dt * 0.5;
+
+        //     dx = s * (yh - xh);
+        //     dy = xh * (r - zh) - yh;
+        //     dz = xh * yh - b * zh;
+
+        //     x[i] += dx * dt;
+        //     y[i] += dy * dt;
+        //     z[i] += dz * dt;
+        // }
+        // }
+
+        // function update () {
+        // compute();
+
+        // Plotly.animate('grafico', {
+        //     data: [{x: x, y: z}]
+        // }, {
+        //     transition: {
+        //     duration: 0
+        //     },
+        //     frame: {
+        //     duration: 0,
+        //     redraw: false
+        //     }
+        // });
+
+        // requestAnimationFrame(update);
+        // }
+
+        // requestAnimationFrame(update);
+
+
+        //DIBUJO EN 3D
+        // Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/3d-scatter.csv', function(err, rows){
+        // function unpack(rows, key) {
+        //     return rows.map(function(row)
+        //     { return row[key]; });}
+
+        // var trace1 = {
+        //     x:unpack(rows, 'x1'), y: unpack(rows, 'y1'), z: unpack(rows, 'z1'),
+        //     mode: 'markers',
+        //     marker: {
+        //         size: 12,
+        //         line: {
+        //         color: 'rgba(217, 217, 217, 0.14)',
+        //         width: 0.5},
+        //         opacity: 0.8},
+        //     type: 'scatter3d'
+        // };
+
+        // var trace2 = {
+        //     x:unpack(rows, 'x2'), y: unpack(rows, 'y2'), z: unpack(rows, 'z2'),
+        //     mode: 'markers',
+        //     marker: {
+        //         color: 'rgb(127, 127, 127)',
+        //         size: 12,
+        //         symbol: 'circle',
+        //         line: {
+        //         color: 'rgb(204, 204, 204)',
+        //         width: 1},
+        //         opacity: 0.8},
+        //     type: 'scatter3d'};
+
+        // var data = [trace1, trace2];
+        // var layout = {margin: {
+        //     l: 0,
+        //     r: 0,
+        //     b: 0,
+        //     t: 0
+        // }};
+        // Plotly.newPlot('grafico', data, layout);
+        // });
+    </script>
+</body>
+</html>
