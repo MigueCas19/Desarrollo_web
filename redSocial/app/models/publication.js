@@ -1,13 +1,14 @@
-"use strict"
+"user strict"
 
 var mongoose = require('mongoose')
-var Schema = mongoose.Schema;
+var Schema = mongose.Schema;
 
 var PublicationSchema = Schema({
     content:String,
     file:String,
+    email:String,
     created_at:String,
-    user:{type:Schema.ObjectId, ref:'User'}
+    user:{type:Schema.ObjectId,ref:'User'}
 })
 
-module.exports = mongoose.model('Publication', PublicationSchema)
+module.exports = mongose.model('Publication',UserSchema);
